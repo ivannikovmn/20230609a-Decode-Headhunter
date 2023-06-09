@@ -1,0 +1,40 @@
+﻿Web
+https://www.docker.com/products/docker-desktop/
+-- n-oе кол-во попыток установить по гуглы, финал вариант установки docker для windows server 2016 ниже
+-- https://forums.docker.com/t/docker-desktop-cannot-be-installed-at-windows-server-2016/83748 
+   You will need to install Docker Desktop 2.0.0.3 I believe. Docker is no longer updating for 2016
+--- https://docs.docker.com/desktop/previous-versions/2.x-windows/
+docker --version
+https://hub.docker.com/_/postgres/tags?page=2
+https://www.pgadmin.org/download/
+https://www.npmjs.com/package/express
+http://localhost:3000/ и http://localhost:3000 одно и то же
+https://www.postman.com/downloads/
+
+Extensions
+yaml - для настройки docker в yaml файле
+PostgreSQL
+Docker
+
+Termnal vsc (node) (лежит по D:\!nodejs\blog)
+docker-compose up --build (--build в первый раз используется при скачивании далее не нужно)
+docker-compose up (+ по умолчанию запускает docker-compose.yml)
+npm init 
+npm i express
+node server.js
+npm start
+npm run dev
+npm i nodemon -g (глобально устанавливается)
+npm i nodemon (локально)
+npm i morgan (можно видеть различные логи)
+npm i multer (для того чтобы файлы загружать)
+
+Termnal vsc(bash) (Git)
+git init 
+	.gitignore node_modules 
+git add .
+git commit -m "initial"
+git remote add origin https://github.com/ivannikovmn/20230609a-Decode-Headhunter
+	p.s git branch --move master main - переименовать master в main в visual code 
+git push origin main
+---
