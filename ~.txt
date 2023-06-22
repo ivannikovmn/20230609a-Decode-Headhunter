@@ -4,19 +4,23 @@ https://www.docker.com/products/docker-desktop/
 -- https://forums.docker.com/t/docker-desktop-cannot-be-installed-at-windows-server-2016/83748 
    You will need to install Docker Desktop 2.0.0.3 I believe. Docker is no longer updating for 2016
 --- https://docs.docker.com/desktop/previous-versions/2.x-windows/
-docker --version
 https://hub.docker.com/_/postgres/tags?page=2
 https://www.pgadmin.org/download/
 https://www.npmjs.com/package/express
 http://localhost:3000/ и http://localhost:3000 одно и то же
 https://www.postman.com/downloads/
+...
+https://chat.openai.com/
+
+Cmd
+docker --version
 
 Extensions
 yaml - для настройки docker в yaml файле
 PostgreSQL
 Docker
 
-Termnal vsc (node) (лежит по D:\!nodejs\blog)
+Termnal vsc (node) (лежит по D:\!nodejs\hh.kz)
 docker-compose up --build (--build в первый раз используется при скачивании далее не нужно)
 docker-compose up (+ по умолчанию запускает docker-compose.yml)
 npm init 
@@ -28,6 +32,24 @@ npm i nodemon -g (глобально устанавливается)
 npm i nodemon (локально)
 npm i morgan (можно видеть различные логи)
 npm i multer (для того чтобы файлы загружать)
+...
+npm install sequelize pg pg-hstore
+npm i sequelize-cli
+npm i sequelize-cli -g
+npx sequelize-cli migration:generate --name create-company
+npx sequelize-cli migration:generate --name create-role
+npx sequelize-cli migration:generate --name create-user
+npx sequelize-cli db:migrate
+npx sequelize-cli migration:generate --name create-auth-code
+npx sequelize-cli db:migrate
+npx sequelize-cli db:migrate:undo:all
+npm install nodemailer
+npx sequelize-cli db:migrate:undo --name 20230621141718-create-auth-code.js
+npx sequelize-cli db:migrate
+npx sequelize-cli db:seed --seed seedRole.js
+
+node
+Date.now()
 
 Termnal vsc(bash) (Git)
 git init 
@@ -38,3 +60,7 @@ git remote add origin https://github.com/ivannikovmn/20230609a-Decode-Headhunter
 	p.s git branch --move master main - переименовать master в main в visual code 
 git push origin main
 ---
+git add .
+git commit -m "add RestAPI l-4 (user registration)"
+git push origin main
+
