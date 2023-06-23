@@ -11,6 +11,8 @@ http://localhost:3000/ и http://localhost:3000 одно и то же
 https://www.postman.com/downloads/
 ...
 https://chat.openai.com/
+https://jwt.io/
+https://www.epochconverter.com/
 
 Cmd
 docker --version
@@ -47,6 +49,9 @@ npm install nodemailer
 npx sequelize-cli db:migrate:undo --name 20230621141718-create-auth-code.js
 npx sequelize-cli db:migrate
 npx sequelize-cli db:seed --seed seedRole.js
+-
+npm i passport jsonwebtoken
+npm i passport-jwt
 
 node
 Date.now()
@@ -63,4 +68,9 @@ git push origin main
 git add .
 git commit -m "add RestAPI l-4 (user registration)"
 git push origin main
+---
+git add .
+git commit -m "add RestAPI l-5 (user authorization)"
+git push origin main
+
 
