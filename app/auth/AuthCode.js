@@ -17,7 +17,7 @@ const AuthCode = sequelize.define('AuthCode', {
   },    
 },{
   timestamps: false, // Отключение автоматических полей createdAt и updatedAt
-}
+  }
 );
 
 module.exports = AuthCode;

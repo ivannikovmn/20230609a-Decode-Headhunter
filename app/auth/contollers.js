@@ -7,7 +7,7 @@ const Role = require('./Role');
 
 const {jwtOptions} = require('./passport')
 
-const SendVerigicationEmail = (req, res) => {
+const SendVerificationEmail = (req, res) => {
     // console.log(req.body);
 
     const code = "HH" + Date.now();
@@ -74,6 +74,6 @@ const verifyCode = async (req, res) => {
 }
 
 module.exports = {
-    SendVerigicationEmail,
+    SendVerificationEmail,
     verifyCode
 }

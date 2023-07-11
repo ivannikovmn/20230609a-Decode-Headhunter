@@ -4,6 +4,13 @@ https://www.docker.com/products/docker-desktop/
 -- https://forums.docker.com/t/docker-desktop-cannot-be-installed-at-windows-server-2016/83748 
    You will need to install Docker Desktop 2.0.0.3 I believe. Docker is no longer updating for 2016
 --- https://docs.docker.com/desktop/previous-versions/2.x-windows/
+-- для windows server 2019
+--- сmd bcdedit /set hypervisorlaunchtype off
+-- в win 2019 сервер когда не работает докер и после обновления системы
+--- сmd bcdedit /enum
+--- сmd bcdedit /set hypervisorlaunchtype auto
+--- https://nodejs.org/en
+
 https://hub.docker.com/_/postgres/tags?page=2
 https://www.pgadmin.org/download/
 https://www.npmjs.com/package/express
@@ -52,6 +59,20 @@ npx sequelize-cli db:seed --seed seedRole.js
 -
 npm i passport jsonwebtoken
 npm i passport-jwt
+-
+npx sequelize-cli migration:generate --name create-country
+npx sequelize-cli migration:generate --name create-city
+npx sequelize-cli db:migrate
+npx sequelize-cli seed:generate --name seed_countries
+npx sequelize-cli seed:generate --name seed_cities
+npx sequelize-cli db:seed --seed 20230710132228-seed_countries.js
+npx sequelize-cli db:seed --seed 20230710132345-seed_cities.js
+npx sequelize-cli migration:generate --name create-skill
+npx sequelize-cli seed:generate --name seed_skills
+npx sequelize-cli db:seed --seed 20230711073857-seed_skills.js
+npx sequelize-cli migration:generate --name create-employment-type
+npx sequelize-cli seed:generate --name seed_employment_types
+npx sequelize-cli db:seed --seed 20230711091055-seed_employment_types.js
 
 node
 Date.now()
@@ -72,5 +93,27 @@ git push origin main
 git add .
 git commit -m "add RestAPI l-5 (user authorization)"
 git push origin main
+---
+git add .
+git commit -m "add RestAPI l-6 (region[country, city], skills, employment-type, languages)"
+git push origin main
 
 
+Темы
+1. Урок приветствие и ER диаграмма
+2. Установка PostgreSQL, PGAdmin и знакомство с базовыми командами SELECT UPDATE INSERT INTO DELETE
+3. Создание базового сервера Разбор сериалзиации данных
+4. Функционал регистрация Работника
+5. Аторизация и Logout
+6. Написание сидов для (Country, City, skills, education, Employment_types) foreign_language
+7. Добавление Резюме, получение списка резюме
+8. Редактирование и Удаление Резюме
+9. Регистрация работодателя
+10. Авторизация работодателя
+11. Добавление вакансии/получение списка вакансий
+12. Редактирование вакансии и удаление
+13. Получение полной информации о конкретном резюме/вакансии
+14. Поиск вакансии по фильтрам
+15. Создание отклика/Список откликов для соискателя/Удаление отклика
+16. Список откликов для работодателя с возможностью фильтрации по статусам/Функционал ответа на отклик
+17. Поиск резюме по фильтрам

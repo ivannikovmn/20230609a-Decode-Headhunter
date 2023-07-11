@@ -14,6 +14,10 @@ app.use(passport.initialize());
 require('./app/auth/passport')
 
 app.use(require('./app/auth/routes'))
+app.use(require('./app/region/routes')) 
+app.use(require('./app/skills/routes')) 
+app.use(require('./app/employment-type/routes')) 
+app.use(require('./app/languages/routes')) 
 
 app.listen(3000, () => {
     console.log('Server is listening on port 3000');
