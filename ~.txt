@@ -10,6 +10,7 @@ https://www.docker.com/products/docker-desktop/
 --- сmd bcdedit /enum
 --- сmd bcdedit /set hypervisorlaunchtype auto
 --- https://nodejs.org/en
+https://www.figma.com/file/Q10u6OrUb4lIddWxnrdbDn/HeadHunter-Database%2B?type=whiteboard&node-id=0-1&t=dumCjZimyQQReFkt-0
 
 https://hub.docker.com/_/postgres/tags?page=2
 https://www.pgadmin.org/download/
@@ -56,7 +57,7 @@ npm install nodemailer
 npx sequelize-cli db:migrate:undo --name 20230621141718-create-auth-code.js
 npx sequelize-cli db:migrate
 npx sequelize-cli db:seed --seed seedRole.js
--
+...
 npm i passport jsonwebtoken
 npm i passport-jwt
 -
@@ -73,6 +74,14 @@ npx sequelize-cli db:seed --seed 20230711073857-seed_skills.js
 npx sequelize-cli migration:generate --name create-employment-type
 npx sequelize-cli seed:generate --name seed_employment_types
 npx sequelize-cli db:seed --seed 20230711091055-seed_employment_types.js
+...
+npx sequelize-cli migration:generate --name create-resume
+npx sequelize-cli migration:generate --name create-resume-employment-type
+npx sequelize-cli db:migrate:undo
+npx sequelize-cli migration:generate --name working-history
+npx sequelize-cli migration:generate --name create-education
+npx sequelize-cli migration:generate --name foreign-language
+
 
 node
 Date.now()
@@ -94,10 +103,15 @@ git add .
 git commit -m "add RestAPI l-5 (user authorization)"
 git push origin main
 ---
+git config --global --add safe.directory 'D:/'\!'nodejs/hh.kz'
+---
 git add .
 git commit -m "add RestAPI l-6 (region[country, city], skills, employment-type, languages)"
 git push origin main
-
+---
+git add .
+git commit -m "add RestAPI l-7 (app resume-models and migrations for education, foreign language, resume, resume employment type, working history")
+git push origin main
 
 Темы
 1. Урок приветствие и ER диаграмма
@@ -106,6 +120,7 @@ git push origin main
 4. Функционал регистрация Работника
 5. Аторизация и Logout
 6. Написание сидов для (Country, City, skills, education, Employment_types) foreign_language
+7.
 7. Добавление Резюме, получение списка резюме
 8. Редактирование и Удаление Резюме
 9. Регистрация работодателя
