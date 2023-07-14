@@ -16,7 +16,7 @@ const Education = sequelize.define('Education', {
     allowNull: false,
   },    
   major: {
-    type: DataTypes.DATE,
+    type: DataTypes.STRING,
     allowNull: false,
   }, 
   end_date: {

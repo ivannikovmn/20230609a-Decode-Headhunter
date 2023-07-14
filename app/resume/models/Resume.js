@@ -1,6 +1,6 @@
 const { DataTypes } = require('sequelize');
 const sequelize = require('../../../config/db') //Импортируйте настройки подключения к базе данных
-const City = require('./City')
+const City = require('../../region/City')
 const User = require('../../auth/User')
 const Country = require('../../region/Country')
 

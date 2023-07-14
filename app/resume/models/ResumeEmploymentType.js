@@ -1,9 +1,9 @@
 const { DataTypes } = require('sequelize');
-const sequelize = require('../../config/db') //Импортируйте настройки подключения к базе данных
+const sequelize = require('../../../config/db') //Импортируйте настройки подключения к базе данных
 const Resume = require('./Resume')
-const EmploymentType = require('../employment-type/EmploymentType')
+const EmploymentType = require('../../employment-type/EmploymentType')
 
-const ResumeEmploymentType = sequelize.define('ResumeEmploymentType', {
+const ResumeEmploymentTypes = sequelize.define('ResumeEmploymentTypes', {
   // Additional attributes (if any) related to the relationship
   id: {
     type: DataTypes.INTEGER,
@@ -14,8 +14,23 @@ const ResumeEmploymentType = sequelize.define('ResumeEmploymentType', {
     timestamps: false, // Отключение автоматических полей createdAt и updatedAt
 });
 
-// Define the association
-Resume.belongsToMany(EmploymentType, { through: ResumeEmploymentType });
-EmploymentType.belongsToMany(Resume, { through: ResumeEmploymentType });
 
-module.exports = ResumeEmploymentType;
+// // не верно
+// ResumeEmploymentTypes.belongsTo(Resume, { foreignKey: 'resumeId' }); // Определяем внешний ключ 'roleId'
+// ResumeEmploymentTypes.belongsTo(EmploymentType, { foreignKey: 'employmentTypeId' }); // Определяем внешний ключ 'roleId'
+
+
+// Define the association
+Resume.belongsToMany(EmploymentType, { through: ResumeEmploymentTypes, foreignKey: 'resumeId', otherKey: 'employmentTypeId' });
+EmploymentType.belongsToMany(Resume, { through: ResumeEmploymentTypes, foreignKey: 'resumeId', otherKey: 'employmentTypeId'  });
+
+// // не верно
+// Resume.hasMany(ResumeEmploymentTypes, { 
+//   foreignKey: 'resumeId',
+// });
+//
+// EmploymentType.hasMany(ResumeEmploymentTypes, { 
+//   foreignKey: 'employmentTypeId',
+// });
+
+module.exports = ResumeEmploymentTypes;

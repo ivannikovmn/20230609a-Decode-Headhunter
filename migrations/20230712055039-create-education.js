@@ -2,7 +2,7 @@
 
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    await queryInterface.createTable('Educations', {
+    await queryInterface.createTable('Education', {
       id: {
         type: Sequelize.INTEGER,
         primaryKey: true,
@@ -21,7 +21,7 @@ module.exports = {
         allowNull: false
       },
       major: {
-        type: Sequelize.DATE,
+        type: Sequelize.STRING,
         allowNull: false
       },
       end_date: {
@@ -42,6 +42,6 @@ module.exports = {
   },
 
   down: async (queryInterface, Sequelize) => {
-    await queryInterface.dropTable('Educations');
+    await queryInterface.dropTable('Education');
   }
 };

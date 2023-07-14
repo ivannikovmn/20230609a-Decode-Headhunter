@@ -16,6 +16,7 @@ passport.use (new JwtStrategy(jwtOptions, async(jwPayload, done) => {
   // Если пользователь найден, вызовите `done(null, user)`,
   // иначе `done(null, false)` или `done(error)` в случае ошибки.
   const user = await User.findByPk(jwPayload.id)
+  
   if(user) done(null, user)
   else done(null, false)
 }));

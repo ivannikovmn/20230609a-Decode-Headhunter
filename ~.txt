@@ -9,6 +9,7 @@ https://www.docker.com/products/docker-desktop/
 -- в win 2019 сервер когда не работает докер и после обновления системы
 --- сmd bcdedit /enum
 --- сmd bcdedit /set hypervisorlaunchtype auto
+--- перезагрузка
 --- https://nodejs.org/en
 https://www.figma.com/file/Q10u6OrUb4lIddWxnrdbDn/HeadHunter-Database%2B?type=whiteboard&node-id=0-1&t=dumCjZimyQQReFkt-0
 
@@ -29,6 +30,11 @@ Extensions
 yaml - для настройки docker в yaml файле
 PostgreSQL
 Docker
+
+console webbrowser
+new Date()
+let a = new Date()
+a.toISOString()
 
 Termnal vsc (node) (лежит по D:\!nodejs\hh.kz)
 docker-compose up --build (--build в первый раз используется при скачивании далее не нужно)
@@ -110,7 +116,11 @@ git commit -m "add RestAPI l-6 (region[country, city], skills, employment-type, 
 git push origin main
 ---
 git add .
-git commit -m "add RestAPI l-7 (app resume-models and migrations for education, foreign language, resume, resume employment type, working history")
+git commit -m "add RestAPI l-7 (app resume-models and migrations for education, foreign language, resume, resume employment type, working history)"
+git push origin main
+---
+git add .
+git commit -m "add RestAPI l-8 (add resume)"
 git push origin main
 
 Темы
@@ -121,7 +131,7 @@ git push origin main
 5. Аторизация и Logout
 6. Написание сидов для (Country, City, skills, education, Employment_types) foreign_language
 7.
-7. Добавление Резюме, получение списка резюме
+7. Добавление Резюме, получение списка резюме -> 8
 8. Редактирование и Удаление Резюме
 9. Регистрация работодателя
 10. Авторизация работодателя
