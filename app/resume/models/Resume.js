@@ -55,8 +55,8 @@ const Resume = sequelize.define('Resume', {
   },   
 });
 
-Resume.belongsTo(City, { foreignKey: 'cityId' }); // Определяем внешний ключ 'roleId'
+Resume.belongsTo(City, { foreignKey: 'cityId', as: "city" }); // Определяем внешний ключ 'roleId'
 Resume.belongsTo(User, { foreignKey: 'userId' }); // Определяем внешний ключ 'roleId'
-Resume.belongsTo(Country, { foreignKey: 'citizenship' }); // Определяем внешний ключ 'roleId'
+Resume.belongsTo(Country, { foreignKey: 'citizenship', as: 'citizenshipObj' }); // Определяем внешний ключ 'roleId'
 
 module.exports = Resume;

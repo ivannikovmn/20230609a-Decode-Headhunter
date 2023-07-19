@@ -122,6 +122,10 @@ git push origin main
 git add .
 git commit -m "add RestAPI l-8 (add resume)"
 git push origin main
+---
+git add .
+git commit -m "add RestAPI l-9 (resume: p1 list, p2 delete, p3 edit, end info for employee, fix 'if(req.body.educations && req.body.educations.length > 0){ > if(req.body.education && req.body.education.length > 0){'  in 'app > resume > controller')"
+git push origin main
 
 Темы
 1. Урок приветствие и ER диаграмма

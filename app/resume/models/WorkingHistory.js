@@ -29,4 +29,6 @@ const WorkingHistory = sequelize.define('WorkingHistory', {
 
 WorkingHistory.belongsTo(Resume, { foreignKey: 'resumeId' }); // Определяем внешний ключ 'roleId'
 
+Resume.hasMany(WorkingHistory, { foreignKey: 'resumeId', as: 'resumeWorkingHistories' });
+
 module.exports = WorkingHistory;

@@ -16,5 +16,6 @@ const ForeignLanguage = sequelize.define('ForeignLanguage', {
 });
 
 ForeignLanguage.belongsTo(Resume, { foreignKey: 'resumeId' }); // Определяем внешний ключ 'roleId'
+Resume.hasMany(ForeignLanguage, { foreignKey: 'resumeId', as: "foreignLanguages" })
 
 module.exports = ForeignLanguage;

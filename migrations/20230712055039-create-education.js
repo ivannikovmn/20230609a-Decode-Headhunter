@@ -21,7 +21,7 @@ module.exports = {
         allowNull: false
       },
       major: {
-        type: Sequelize.STRING,
+        type: Sequelize.STRING, //не date?
         allowNull: false
       },
       end_date: {
