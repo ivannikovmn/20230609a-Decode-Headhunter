@@ -22,6 +22,8 @@ https://www.postman.com/downloads/
 https://chat.openai.com/
 https://jwt.io/
 https://www.epochconverter.com/
+---l10
+https://www.npmjs.com/package/multer
 
 Cmd
 docker --version
@@ -87,7 +89,9 @@ npx sequelize-cli db:migrate:undo
 npx sequelize-cli migration:generate --name working-history
 npx sequelize-cli migration:generate --name create-education
 npx sequelize-cli migration:generate --name foreign-language
-
+---l10
+npm i bcrypt
+npm i multer
 
 node
 Date.now()
@@ -126,6 +130,11 @@ git push origin main
 git add .
 git commit -m "add RestAPI l-9 (resume: p1 list, p2 delete, p3 edit, end info for employee, fix 'if(req.body.educations && req.body.educations.length > 0){ > if(req.body.education && req.body.education.length > 0){'  in 'app > resume > controller')"
 git push origin main
+---
+git add .
+git commit -m "add RestAPI l-10(start for manager - l1-l3 registration, l4 - authorization, l5 - fix img)"
+git push origin main
+---
 
 Темы
 1. Урок приветствие и ER диаграмма
