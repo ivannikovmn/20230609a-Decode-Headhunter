@@ -88,10 +88,21 @@ npx sequelize-cli migration:generate --name create-resume-employment-type
 npx sequelize-cli db:migrate:undo
 npx sequelize-cli migration:generate --name working-history
 npx sequelize-cli migration:generate --name create-education
-npx sequelize-cli migration:generate --name foreign-language
+npx sequelize-cli migration:generate --name create-foreign-language
 ---l10
 npm i bcrypt
 npm i multer
+---l11
+npx sequelize-cli migration:generate --name create-specialization-type
+npx sequelize-cli migration:generate --name create-specialization
+web: https://dev.hh.ru/ > https://github.com/hhru/api/blob/master/docs/specializations.md > https://api.hh.ru/specializations
+npx sequelize-cli seed:generate --name seed_specializations
+web: https://beautifier.io/
+npx sequelize-cli db:seed --seed 20230725143150-seed_specializations.js
+npx sequelize-cli migration:generate --name create-experience
+npx sequelize-cli seed:generate --name seed_experience
+npx sequelize-cli db:seed --seed 20230726113117-seed_experience.js
+npx sequelize-cli migration:generate --name create-vacancy
 
 node
 Date.now()
@@ -135,6 +146,9 @@ git add .
 git commit -m "add RestAPI l-10(start for manager - l1-l3 registration, l4 - authorization, l5 - fix img)"
 git push origin main
 ---
+git add .
+git commit -m "add RestAPI l-11(add vacancy, specializations), fix migrations"
+git push origin main
 
 Темы
 1. Урок приветствие и ER диаграмма
