@@ -149,6 +149,12 @@ git push origin main
 git add .
 git commit -m "add RestAPI l-11(add vacancy, specializations), fix migrations"
 git push origin main
+-
+git add .
+git commit -m "add RestAPI l-12(list vacancy), fix resume > middlewares, fix CompanyId > companyId"
+git push origin main
+-
+
 
 Темы
 1. Урок приветствие и ER диаграмма

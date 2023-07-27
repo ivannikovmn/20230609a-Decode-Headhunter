@@ -7,7 +7,7 @@ const Company = require('../../auth/Company');
 const Experience = require('./Experience');
 const EmploymentType = require('../../employment-type/EmploymentType')
 
-const Vacancy = sequelize.define('Resume', {
+const Vacancy = sequelize.define('Vacancy', {
   name: {
     type: DataTypes.STRING,
     allowNull: false,
@@ -37,7 +37,7 @@ const Vacancy = sequelize.define('Resume', {
     allowNull: false,
   },   
   about_company: {
-    type: DataTypes.DATE,
+    type: DataTypes.STRING,
     allowNull: false,
   }    
 });
@@ -45,7 +45,7 @@ const Vacancy = sequelize.define('Resume', {
 Vacancy.belongsTo(City, { foreignKey: 'cityId', as: "city" }); // Определяем внешний ключ 'roleId'
 Vacancy.belongsTo(User, { foreignKey: 'userId' }); // Определяем внешний ключ 'roleId'
 // Vacancy.belongsTo(Country, { foreignKey: 'companyId', as: 'company' }); // Определяем внешний ключ 'roleId'
-Vacancy.belongsTo(Company, { foreignKey: 'companyId', as: 'company'  }); // Определяем внешний ключ 'roleId'
+Vacancy.belongsTo(Company, { foreignKey: 'companyId', as: 'company' })
 Vacancy.belongsTo(Specialization, { foreignKey: 'specializationId', as: 'specialization'  }); // Определяем внешний ключ 'roleId'
 Vacancy.belongsTo(Experience, { foreignKey: 'experienceId', as: 'experience'  }); // Определяем внешний ключ 'roleId'
 Vacancy.belongsTo(EmploymentType, { foreignKey: 'employmentTypeId', as: 'employmentType'  }); // Определяем внешний ключ 'roleId'

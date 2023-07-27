@@ -31,6 +31,6 @@ const User = sequelize.define('User', {
 });
 
 User.belongsTo(Role, { foreignKey: 'roleId' }); // Определяем внешний ключ 'roleId'
-User.belongsTo(Company, { foreignKey: 'CompanyId' })
+User.belongsTo(Company, { foreignKey: 'companyId' }) 
 
 module.exports = User;

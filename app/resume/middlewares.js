@@ -3,7 +3,7 @@ const validateResume = (req, res, next) => {
     let errors = {};
     
     if(!req.body.first_name || req.body.first_name.length == 0)
-        errors.first_name = "Поля Имя обязательное"
+        errors.first_name = "Поле Имя обязательное"
 
     if(!req.body.last_name || req.body.last_name.length == 0)
         errors.last_name = "Поле Фамилия обязательное" 
