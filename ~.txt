@@ -103,6 +103,8 @@ npx sequelize-cli migration:generate --name create-experience
 npx sequelize-cli seed:generate --name seed_experience
 npx sequelize-cli db:seed --seed 20230726113117-seed_experience.js
 npx sequelize-cli migration:generate --name create-vacancy
+---l14
+npx sequelize-cli migration:generate --name create-apply-model
 
 node
 Date.now()
@@ -158,6 +160,9 @@ git add .
 git commit -m "add RestAPI l-13(vacancy delete, edit, search)"
 git push origin main
 -
+git add .
+git commit -m "add RestAPI l-14(p1 vacancy search, p2-p4,p5[list],p6[delete] vacancy applies)"
+git push origin main
 
 Темы
 1. Урок приветствие и ER диаграмма
