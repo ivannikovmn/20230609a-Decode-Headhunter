@@ -163,6 +163,10 @@ git push origin main
 git add .
 git commit -m "add RestAPI l-14(p1 vacancy search, p2-p4,p5[list],p6[delete] vacancy applies)"
 git push origin main
+-
+git add .
+git commit -m "add RestAPI l-15(p1 getEmployeeAplies include vacacncy, p2 invitation, p3 decline, p4 Apply, p5 notification mail, applies try catch)"
+git push origin main
 
 Темы
 1. Урок приветствие и ER диаграмма

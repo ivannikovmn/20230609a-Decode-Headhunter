@@ -11,7 +11,7 @@ const Apply = sequelize.define('Apply', {
     
 });
 
-Apply.belongsTo(Resume, { foreignKey: 'resumeId' }); // Определяем внешний ключ 'roleId'
-Apply.belongsTo(Vacancy, { foreignKey: 'vacancyid'})
+Apply.belongsTo(Resume, { foreignKey: 'resumeId', as: 'resume' }); // Определяем внешний ключ 'roleId'
+Apply.belongsTo(Vacancy, { foreignKey: 'vacancyid', as: 'vacancy'})
 
 module.exports = Apply;
