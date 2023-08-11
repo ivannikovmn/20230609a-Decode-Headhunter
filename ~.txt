@@ -128,9 +128,14 @@ git clone https://github.com/ivannikovmn/20230609a-Decode-Headhunter.git
 cd 20230609a-Decode-Headhunter
 npm i
 	npm start
-
+npm run prod
+git pull
+vi package.json
+------
 node
 Date.now()
+------
+
 
 Termnal vsc(bash) (Git)
 git init 
@@ -194,7 +199,14 @@ git push origin main
 git add .
 git commit -m "decode.kz first commit"
 git push origin main
-
+-
+git add .
+git commit -m "production mode configured"
+git push origin main
+-
+git add.
+git commit -m "production mode configured"
+git push origin main
 
 Темы
 1. Урок приветствие и ER диаграмма
