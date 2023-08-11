@@ -129,6 +129,16 @@ cd 20230609a-Decode-Headhunter
 npm i
 	npm start
 npm run prod
+
+npm run prod_digitalocean_ubuntu
+Чтобы заработала на ubuntu нужно:
+	rm -rf node_modules
+	rm package-lock.json
+	npm install
+	npm rebuild bcrypt --update-binary
+	yarn install
+	rm -rf node_modules/bcrypt
+	npm install bcrypt
 git pull
 vi package.json
 ------
