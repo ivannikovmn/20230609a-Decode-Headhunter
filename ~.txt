@@ -107,6 +107,7 @@ npx sequelize-cli migration:generate --name create-vacancy
 npx sequelize-cli migration:generate --name create-apply-model
 ---l16
 https://www.digitalocean.com/try/free-trial-offer?utm_campaign=emea_brand_kw_en_cpc&utm_adgroup=digitalocean_credit_exact&_keyword=digitalocean%20free%20tier&_device=c&_adposition=&utm_content=conversion&utm_medium=cpc&utm_source=google&gad=1&gclid=Cj0KCQjwuNemBhCBARIsADp74QQ1j8cYQPPsAs_g9ydUHDnRojcqtJ0sQeKBd8s3uREJNhZRXG1haU8aAgD3EALw_wcB
+https://cloud.digitalocean.com/droplets/369486588/graphs?i=297482&period=hour
 ssh root@167.71.215.3
 ls
 cd ../
@@ -123,7 +124,10 @@ https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubunt
 	nvm install v18.17.0
 node -v
 npm -v
-	
+git clone https://github.com/ivannikovmn/20230609a-Decode-Headhunter.git
+cd 20230609a-Decode-Headhunter
+npm i
+	npm start
 
 node
 Date.now()
@@ -190,6 +194,7 @@ git push origin main
 git add .
 git commit -m "decode.kz first commit"
 git push origin main
+
 
 Темы
 1. Урок приветствие и ER диаграмма
