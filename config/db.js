@@ -1,6 +1,6 @@
 const { Sequelize } = require('sequelize');
-// const dbConfig = require('./config');
-// const dbConfig = require('./config')
+const fs = require('fs')
+const path = require("path")
 const dbConf = require('./config')
 let sequelize;
 
@@ -10,7 +10,12 @@ if(process.env.NODE_ENV === "production"){
   sequelize = new Sequelize(dbConf.production.database, dbConf.production.username, dbConf.production.password, {
     host: dbConf.production.host,
     dialect: dbConf.production.dialect,
-    port: dbConf.production.port
+    port: dbConf.production.port,
+    dialectOptions: {
+      ssl: {
+        ca: fs.readFileSync(path.resolve("config", "ca-certificate.crt")),
+      },    
+    }
   });
 } else{
   console.log("111");
