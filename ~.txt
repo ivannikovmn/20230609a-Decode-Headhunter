@@ -105,6 +105,25 @@ npx sequelize-cli db:seed --seed 20230726113117-seed_experience.js
 npx sequelize-cli migration:generate --name create-vacancy
 ---l14
 npx sequelize-cli migration:generate --name create-apply-model
+---l16
+https://www.digitalocean.com/try/free-trial-offer?utm_campaign=emea_brand_kw_en_cpc&utm_adgroup=digitalocean_credit_exact&_keyword=digitalocean%20free%20tier&_device=c&_adposition=&utm_content=conversion&utm_medium=cpc&utm_source=google&gad=1&gclid=Cj0KCQjwuNemBhCBARIsADp74QQ1j8cYQPPsAs_g9ydUHDnRojcqtJ0sQeKBd8s3uREJNhZRXG1haU8aAgD3EALw_wcB
+ssh root@167.71.215.3
+ls
+cd ../
+cd usr/
+usr
+cd ../home
+cd
+pwd
+cd root
+https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-20-04
+	curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh
+	curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
+	source ~/.bashrc
+	nvm install v18.17.0
+node -v
+npm -v
+	
 
 node
 Date.now()
@@ -166,6 +185,10 @@ git push origin main
 -
 git add .
 git commit -m "add RestAPI l-15(p1 getEmployeeAplies include vacacncy, p2 invitation, p3 decline, p4 Apply, p5 notification mail, applies try catch)"
+git push origin main
+-
+git add .
+git commit -m "decode.kz first commit"
 git push origin main
 
 Темы
