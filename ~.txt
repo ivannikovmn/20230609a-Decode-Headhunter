@@ -203,10 +203,6 @@ git push origin main
 git add .
 git commit -m "production mode configured"
 git push origin main
--
-git add.
-git commit -m "production mode configured"
-git push origin main
 
 Темы
 1. Урок приветствие и ER диаграмма
