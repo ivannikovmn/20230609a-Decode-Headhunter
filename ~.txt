@@ -128,9 +128,7 @@ git clone https://github.com/ivannikovmn/20230609a-Decode-Headhunter.git
 cd 20230609a-Decode-Headhunter
 npm i
 	npm start
-npm run prod
-
-npm run prod_digitalocean_ubuntu
+npm run prod_localserver_windows
 Чтобы заработала на ubuntu нужно:
 	rm -rf node_modules
 	rm package-lock.json
@@ -139,12 +137,16 @@ npm run prod_digitalocean_ubuntu
 	yarn install
 	rm -rf node_modules/bcrypt
 	npm install bcrypt
+npm run prod_digitalocean_ubuntu
+	git checkout -- package.json  # Discard changes to package.json
 git pull
 vi package.json
 ------
 node
 Date.now()
-------
+---l16
+npm install -g sequelize-cli
+sequelize db:migrate
 
 
 Termnal vsc(bash) (Git)
