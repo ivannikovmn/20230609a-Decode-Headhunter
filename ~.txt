@@ -145,9 +145,23 @@ vi package.json
 node
 Date.now()
 ---l16
-npm install -g sequelize-cli
-sequelize db:migrate
-
+windows
+	set NODE_ENV=production; sequelize-cli db:migrate - уже установлено
+	set NODE_ENV=production; sequelize db:seed:all - говорит что роли есть, в сущности для теста запускал нет необходимости запускать т.к digitalocean ubuntu
+ubuntu
+	npm install -g sequelize-cli
+	sequelize-cli db:migrate - не работает
+	NODE_ENV=production sequelize-cli db:migrate
+	NODE_ENV=production sequelize db:seed:all
+https://pm2.keymetrics.io/
+npm i pm2 -g
+pm2 start "npm run prod_digitalocean_ubuntu" --name hh.kz_backend
+pm2 logs
+pm2 status
+pm2 stop 0
+pm2 restart 0
+http://167.71.215.3:3000/api/region/cities
+npm install cors
 
 Termnal vsc(bash) (Git)
 git init 
@@ -214,6 +228,14 @@ git push origin main
 -
 git add .
 git commit -m "production mode configured"
+git push origin main
+-
+git add .
+git commit -m "postgre configs for sequelize-cli configured"
+git push origin main
+-
+git add .
+git commit -m "add RestAPI l-16(cors - white list)"
 git push origin main
 
 Темы
