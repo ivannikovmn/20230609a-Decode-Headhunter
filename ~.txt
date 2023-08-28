@@ -162,6 +162,12 @@ pm2 stop 0
 pm2 restart 0
 http://167.71.215.3:3000/api/region/cities
 npm install cors
+---восстановление
+docker-compose up
+npx sequelize-cli db:migrate
+npx sequelize-cli db:seed:all
+npm run dev
+
 
 Termnal vsc(bash) (Git)
 git init 
@@ -236,6 +242,10 @@ git push origin main
 -
 git add .
 git commit -m "add RestAPI l-16(cors - white list)"
+git push origin main
+-
+git add .
+git commit -m "fix restore db"
 git push origin main
 
 Темы
